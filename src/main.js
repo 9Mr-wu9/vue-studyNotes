@@ -3,9 +3,11 @@ import App from "./App.vue";
 
 import "./assets/main.css";
 const app = createApp(App);
-app.config.unwrapInjectedRef = true
+app.config.unwrapInjectedRef = true;
 
-
+app.config.errorHandler = (err) => {
+  // 处理错误，处理哪些类型的错误？
+};
 
 // 通过 createApp 创建应用实例，传入的对象是个组件(根组件)；可以创建多个应用实例
 app.mount("#app"); // 应用实例必须在调用了 .mount() 方法后才会渲染出来。

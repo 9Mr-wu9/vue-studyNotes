@@ -64,8 +64,9 @@ export default {
 
 <template>
   <div>
+   
     <!-- 基础 -->
-    <!-- <MuBanYuFa /> -->
+    <MuBanYuFa />
     <!-- <XiangYingShiJiChu /> -->
     <!-- <JiSuanShuXing /> -->
     <!-- <ClassAndStyle class="baz boo" style="background:red" /> -->
@@ -92,6 +93,6 @@ export default {
     <!-- <XiangYingShiGongJu /> -->
 
     <!-- 选项式API -->
-    <ZhuangTaiXuanXiang :height="height" age="{30}" />
+    <!-- <ZhuangTaiXuanXiang :height="height" age="{30}" /> -->
   </div>
 </template>

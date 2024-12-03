@@ -6,8 +6,9 @@ export default {
       msg: "msg",
       // 原始HTML
       rawHtml: '<span style="color: red">This should be red.</span>',
-      // Attribute 绑定
+      // Attribute 绑定, v3.4及以上支持同名简写
       dynamicId: "dynamicId",
+      isButtonDisabled: false,
       // 动态绑定多个值
       objectOfAttrs: {
         id: "container",
@@ -48,6 +49,11 @@ export default {
     </div>
     <!-- Attribute 绑定 -->
     <div :id="dynamicId">{{ dynamicId }}</div>
+    <!-- Attribute 绑定 null | undefined -->
+     <!-- class绑定为null，却没被移除？ key不会显示 -->
+    <div :id="undefined" :class="null" :style="null" :key="1">Attribute 绑定 null | undefined</div>
+    <!-- 布尔型 Attribute -->
+    <button :disabled="isButtonDisabled">布尔型 Attribute</button>
     <!-- 动态绑定多个值 -->
     <div :="objectOfAttrs">动态绑定多个值</div>
     <!-- 使用jsvascript表达式 -->
