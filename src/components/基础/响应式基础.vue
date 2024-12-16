@@ -45,7 +45,6 @@ export default {
   methods: {
     increment() {
       this.num++;
-
       // DOM更新时机：更新响应式状态，DOM也会自动更新，但不是同步的
       nextTick(() => {
         // 访问更新后的DOM

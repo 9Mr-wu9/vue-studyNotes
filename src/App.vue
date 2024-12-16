@@ -1,6 +1,8 @@
 <script>
+// 基础
 import MuBanYuFa from "./components/基础/模板语法.vue";
 import XiangYingShiJiChu from "./components/基础/响应式基础.vue";
+import XiangYingShiJiChu1 from './components/基础/响应式基础 -组合式.vue';
 import JiSuanShuXing from "./components/基础/计算属性.vue";
 import ClassAndStyle from "./components/基础/类与样式绑定.vue";
 import TiaoJianXuanRan from "./components/基础/条件渲染.vue";
@@ -9,6 +11,10 @@ import ShiJianChuLi from "./components/基础/事件处理.vue";
 import MuBanYinYong from "./components/模板引用.vue";
 import ZuJian from "./components/基础/组件/组件.vue";
 import BiaoDanShuRuBangDing from "./components/表单输入绑定.vue";
+
+
+import ZuheShiZhenTingQi from './components/基础/侦听器 -组合式.vue';
+// import ZuHeShiMuBanYinYong from './components/基础/模板引用-组合式.vue';
 // 深入组件
 import TouChuanAttrs from "./components/深入组件/透传Attributes.vue";
 import ChaCao from "./components/深入组件/插槽.vue";
@@ -36,6 +42,7 @@ export default {
     // 基础
     MuBanYuFa,
     XiangYingShiJiChu,
+    XiangYingShiJiChu1,
     JiSuanShuXing,
     ClassAndStyle,
     TiaoJianXuanRan,
@@ -44,6 +51,9 @@ export default {
     MuBanYinYong,
     ZuJian,
     BiaoDanShuRuBangDing,
+
+    ZuheShiZhenTingQi,
+    // ZuHeShiMuBanYinYong,
     // 深入组件
     TouChuanAttrs,
     ChaCao,
@@ -64,10 +74,10 @@ export default {
 
 <template>
   <div>
-   
     <!-- 基础 -->
-    <MuBanYuFa />
+    <!-- <MuBanYuFa /> -->
     <!-- <XiangYingShiJiChu /> -->
+    <!-- <XiangYingShiJiChu1 /> -->
     <!-- <JiSuanShuXing /> -->
     <!-- <ClassAndStyle class="baz boo" style="background:red" /> -->
     <!-- <TiaoJianXuanRan /> -->
@@ -77,6 +87,9 @@ export default {
     <!-- <MuBanYinYong ref="child" /> -->
     <!-- <ZuJian /> -->
     <!-- <BiaoDanShuRuBangDing /> -->
+
+    <!-- <ZuheShiZhenTingQi /> -->
+ 
 
     <!-- 深入组件 -->
     <!-- <TouChuanAttrs class="btn-zu btn-zu1" /> -->
