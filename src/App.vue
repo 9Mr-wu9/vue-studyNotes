@@ -2,7 +2,7 @@
 // 基础
 import MuBanYuFa from "./components/基础/模板语法.vue";
 import XiangYingShiJiChu from "./components/基础/响应式基础.vue";
-import XiangYingShiJiChu1 from './components/基础/响应式基础 -组合式.vue';
+import XiangYingShiJiChu1 from "./components/基础/响应式基础 -组合式.vue";
 import JiSuanShuXing from "./components/基础/计算属性.vue";
 import ClassAndStyle from "./components/基础/类与样式绑定.vue";
 import TiaoJianXuanRan from "./components/基础/条件渲染.vue";
@@ -11,13 +11,12 @@ import MuBanYinYong from "./components/模板引用.vue";
 import ZuJian from "./components/基础/组件/组件.vue";
 import BiaoDanShuRuBangDing from "./components/表单输入绑定.vue";
 
-
-import ZuheShiZhenTingQi from './components/基础/侦听器 -组合式.vue';
+import ZuheShiZhenTingQi from "./components/基础/侦听器 -组合式.vue";
 // import ZuHeShiMuBanYinYong from './components/基础/模板引用-组合式.vue';
 
 // 深入组件
-import ZuHeShiProps from './components/深入组件/props-组合式.vue';
-import ZuHeShiVModel from './components/深入组件/组件vmodel-组合式.vue';
+import ZuHeShiProps from "./components/深入组件/props-组合式.vue";
+import ZuHeShiVModel from "./components/深入组件/组件vmodel-组合式.vue";
 import TouChuanAttrs from "./components/深入组件/透传Attributes.vue";
 import ChaCao from "./components/深入组件/插槽.vue";
 import YiLaiZhuRu from "./components/深入组件/依赖注入.vue";
@@ -38,7 +37,7 @@ export default {
     return {
       items: [{ message: "Foo" }, { message: "Bar" }],
       height: 30,
-      countModel: 0,
+      countModel: "countModel",
     };
   },
   components: {
@@ -93,17 +92,19 @@ export default {
     <!-- <BiaoDanShuRuBangDing /> -->
 
     <!-- <ZuheShiZhenTingQi /> -->
- 
 
     <!-- 深入组件 -->
-     <!-- <ZuHeShiProps foo="foo" /> -->
-     <ZuHeShiVModel v-model="countModel" />
+    <!-- <ZuHeShiProps foo="foo" /> -->
+    <!-- <ZuHeShiVModel
+      :modelValue="countModel"
+      @update:modelValue="($event) => (countModel = $event)"
+    /> -->
     <!-- <TouChuanAttrs class="btn-zu btn-zu1" /> -->
     <!-- <ChaCao /> -->
     <!-- <YiLaiZhuRu /> -->
 
     <!-- 逻辑复用 -->
-    <!-- <ZuHeShiHanShu /> -->
+    <ZuHeShiHanShu />
     <!-- <CustomDirectives /> -->
 
     <!-- 组合式API -->
