@@ -1,11 +1,10 @@
 <script setup>
 import { watch, watchEffect } from "vue";
-// const model = defineModel(); // 3.4+
+// const model = defineModel(); // vue3.4+
 // console.log('model', model);
 
 // 等价于
 const props = defineProps(['modelValue'])
-console.log('props',props.modelValue);
 const emit = defineEmits(['update:modelValue'])
 
 // function update() {

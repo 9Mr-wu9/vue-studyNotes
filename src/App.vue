@@ -17,6 +17,7 @@ import ZuheShiZhenTingQi from "./components/基础/侦听器 -组合式.vue";
 // 深入组件
 import ZuHeShiProps from "./components/深入组件/props-组合式.vue";
 import ZuHeShiVModel from "./components/深入组件/组件vmodel-组合式.vue";
+import ZuHeShiTouChuanAttrs from './components/深入组件/透传attr-组合式/index.vue';
 import TouChuanAttrs from "./components/深入组件/透传Attributes.vue";
 import ChaCao from "./components/深入组件/插槽.vue";
 import YiLaiZhuRu from "./components/深入组件/依赖注入.vue";
@@ -59,6 +60,7 @@ export default {
     // 深入组件
     ZuHeShiProps,
     ZuHeShiVModel,
+    ZuHeShiTouChuanAttrs,
     TouChuanAttrs,
     ChaCao,
     YiLaiZhuRu,
@@ -73,6 +75,11 @@ export default {
     // 选项式API
     ZhuangTaiXuanXiang,
   },
+  methods:{
+    onClick() {
+      console.log('父onClick');
+    }
+  }
 };
 </script>
 
@@ -99,12 +106,13 @@ export default {
       :modelValue="countModel"
       @update:modelValue="($event) => (countModel = $event)"
     /> -->
+    <ZuHeShiTouChuanAttrs class="large" id="ZuHeShiTouChuanAttrs" :prop="1" @click="onClick" />
     <!-- <TouChuanAttrs class="btn-zu btn-zu1" /> -->
     <!-- <ChaCao /> -->
     <!-- <YiLaiZhuRu /> -->
 
     <!-- 逻辑复用 -->
-    <ZuHeShiHanShu />
+    <!-- <ZuHeShiHanShu /> -->
     <!-- <CustomDirectives /> -->
 
     <!-- 组合式API -->
